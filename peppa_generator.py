@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-
+import sys
 
 class peppa_generator:
     def __init__(self, file_path):
@@ -25,5 +25,5 @@ class peppa_generator:
             print("Warning: Image too large !")		
 
 if __name__ == "__main__":
-    peppa = peppa_generator(".\\NEWYEAR.jpg")
+    peppa = peppa_generator(sys.argv[-1])
     peppa.generator()
